@@ -6,7 +6,7 @@ then
   $BATDIR/batinfo.sh >> "$BATDIR/batinfo.csv"
 fi
 
-HEADERS=year,month,day,hour,minute,cycle,charge,max_charge,plugged_in,charging,charged,charge_time,deplete_time,amps,volts,temperature
+HEADERS=year,month,day,hour,minute,cycle,charge,max_charge,decay_percent,plugged_in,charging,charged,charge_time,deplete_time,amps,volts,temperature
 if [ ! -s "$BATDIR/batlog.csv" ]
 then
   echo $HEADERS >> "$BATDIR/batlog.csv"

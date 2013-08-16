@@ -8,6 +8,13 @@ TZ=utc date +%Y,%m,%d,%H,%M | tr -d '\n'
 $BATDIR/comma_value.sh CycleCount
 $BATDIR/comma_value.sh CurrentCapacity
 $BATDIR/comma_value.sh MaxCapacity
+
+# Calcuate battery decay as percentage
+MAX_CHARGE=$($BATDIR/value.sh MaxCapacity)
+MAX_CHARGE_NEW=$($BATDIR/value.sh DesignCapacity)
+echo -n ,
+echo "scale=2; $MAX_CHARGE*100/$MAX_CHARGE_NEW" | bc | tr -d '\n'
+
 $BATDIR/comma_value.sh ExternalConnected
 $BATDIR/comma_value.sh IsCharging
 $BATDIR/comma_value.sh FullyCharged

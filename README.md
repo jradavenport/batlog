@@ -35,6 +35,12 @@ To view the data straight from the system utility, run:
     ioreg -rk BatterySerialNumber
 
 
+Decay
+====
+
+Pay special attention to the decay percent. This is how much life your battery has left compared to when it was new, fresh off the shelf.
+
+
 History
 =======
 
@@ -43,6 +49,10 @@ History
 This dataset is the result of my ongoing study of the battery health of
 my 2012 MacBook Air. Logs were saved every 1 min that I was using the
 computer.
+
+[Slashdot Article](http://hardware.slashdot.org/story/13/08/15/1359248/studying-the-slow-decay-of-a-laptop-battery-for-an-entire-year)
+
+[Blog Post](http://www.ifweassume.com/2013/08/the-de-evolution-of-my-laptop-battery.html)
 
 
 Typical Battery Info: Full Dump
