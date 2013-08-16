@@ -1,19 +1,12 @@
-value() {
-  eval "/usr/sbin/ioreg -rk BatterySerialNumber | perl -ne 'print \$1 if /\"$1\" = (.+)/'"
-}
-
-comma_value() {
-  echo -n ,
-  value $1
-}
-
+#!/bin/bash
+BATDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
 echo kernel,max_charge_new,manufacturer,device,serial,firmware
 
 uname -r | tr -d '\n'
-comma_value DesignCapacity
-comma_value Manufacturer
-comma_value DeviceName
-comma_value BatterySerialNumber
-comma_value FirmwareSerialNumber
+$BATDIR/comma_value.sh DesignCapacity
+$BATDIR/comma_value.sh Manufacturer
+$BATDIR/comma_value.sh DeviceName
+$BATDIR/comma_value.sh BatterySerialNumber
+$BATDIR/comma_value.sh FirmwareSerialNumber
 echo
