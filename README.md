@@ -14,7 +14,7 @@ Run this to see cool stuff:
 
 Now add battest to your cron:
 
-    crontab -e
+    EDITOR=nano crontab -e
     * * * * * /path/to/battest.sh
     # Save and Exit
 
