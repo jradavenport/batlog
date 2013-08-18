@@ -1,3 +1,12 @@
+
+Install
+=======
+
+    curl https://raw.github.com/jakl/batlog/master/battest.perl > battest.perl
+    curl https://raw.github.com/jakl/batlog/master/batview.sh > batview.sh
+    chmod +x battest.perl batview.sh
+
+
 HowTo Batlog via Examples
 =============================
 
@@ -10,7 +19,7 @@ Run this to see cool stuff:
     ./battest.perl
     ./battest.perl
     ./battest.perl
-    ./view.sh
+    ./batview.sh
 
 Now add battest to your cron:
 
@@ -28,7 +37,7 @@ Static data is saved once as a spreadsheet in:
 
 To peek at data anytime, run:
 
-    ./view.sh
+    ./batview.sh
 
 
 Decay
@@ -54,8 +63,14 @@ computer.
 
 
 
-Typical ./view.sh
+Peek at data
 ================================
+
+To peek at your most and least recent data, run:
+
+    ./batview.sh
+
+This will show something like:
 
     ------ batlog.csv first 5 lines ------
     year  month  day  hour  minute  cycle  charge  max_charge  decay_percent  plugged_in  charging  charged  charge_time  deplete_time  amps                  volts  temperature
@@ -78,8 +93,10 @@ Typical ./view.sh
     12.4.1  7150            "SMP"         "bq20z451"  "D8632430LWSF90KAY"  1
 
 
+You can also open ./batlog.csv in your favorite spreadsheet editor
 
-Typical Battery Info: Full Dump
+
+Raw battery data
 ================================
 
 To view your current battery data directly from the mac system utility, run:
