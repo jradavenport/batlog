@@ -1,3 +1,3 @@
-date >> ~/batlog.dat
-/usr/sbin/ioreg -l | grep CycleCount >> ~/batlog.dat
-/usr/sbin/ioreg -l | grep Capacity >> ~/batlog.dat
+#!/bin/bash
+BATDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+$BATDIR/battest.perl
