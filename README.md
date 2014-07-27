@@ -7,7 +7,7 @@ http://www.ifweassume.com/2013/08/the-de-evolution-of-my-laptop-battery.html
 
 Note: The data file is a litle ugly, but nothing a simple parser can't fix.
 
-== Install == 
+#Install Guide
 
 To run the script yourself, first download the `battest.sh` file. I renamed it using my terminal to be a hidden file like so:
 
