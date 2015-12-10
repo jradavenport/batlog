@@ -40,3 +40,10 @@ At any time you can see what is in your cron job list by typing:
     $ crontab -l
 
 Happy data gathering!
+
+#Charts
+
+You can turn your data into charts by first converting the batlog data file into a CSV file using [batlog2csv](https://github.com/pietvandongen/batlog2csv) and then dropping the CSV into [batlog chart generator](https://pietvandongen.github.io/batlog-d3-chart/). This will generate charts like:
+
+![example graph](http://pietvandongen.github.io/batlog-d3-chart/images/example.png)
+
